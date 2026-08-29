@@ -1,0 +1,363 @@
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Personal Journey</title>
+</head>
+
+<body>
+
+    <!-- Main Title -->
+    <h1>My Personal Journey</h1>
+
+    <hr>
+
+    <!-- Introduction -->
+    <h2>1. Introduction</h2>
+
+    <h3>Born Details</h3>
+
+    <p>
+        I was born in Madurai on 11/11/1996.
+        Madurai is a beautiful city in Tamil Nadu known for its
+        rich culture and history.
+    </p>
+
+    <h3>Elementary / Primary School</h3>
+
+    <p>
+        I completed my primary and school education at
+        Tagore Vidyalayam Matriculation Higher Secondary School.
+    </p>
+
+    <h3>About Me</h3>
+
+    <p>
+        I am a passionate and hardworking person who believes in
+        continuous learning and personal growth. My journey has
+        helped me develop knowledge, skills, confidence, and
+        valuable life experiences.
+    </p>
+
+    <!-- Simple SVG -->
+    <h3>My Beginning</h3>
+
+    <svg width="200" height="150">
+
+        <circle cx="100" cy="50" r="30"
+                fill="lightblue"
+                stroke="black"
+                stroke-width="2"/>
+
+        <line x1="100" y1="80"
+              x2="100" y2="130"
+              stroke="black"
+              stroke-width="4"/>
+
+        <line x1="100" y1="90"
+              x2="60" y2="110"
+              stroke="black"
+              stroke-width="4"/>
+
+        <line x1="100" y1="90"
+              x2="140" y2="110"
+              stroke="black"
+              stroke-width="4"/>
+
+        <line x1="100" y1="130"
+              x2="70" y2="145"
+              stroke="black"
+              stroke-width="4"/>
+
+        <line x1="100" y1="130"
+              x2="130" y2="145"
+              stroke="black"
+              stroke-width="4"/>
+
+    </svg>
+
+
+    <hr>
+
+
+    <!-- Education -->
+    <h2>2. Education Details</h2>
+
+    <h3>School Education</h3>
+
+    <p>
+        I completed my school education at
+        Tagore Vidyalayam Matriculation Higher Secondary School.
+    </p>
+
+    <h3>Higher Secondary Education</h3>
+
+    <p>
+        I completed my higher secondary education in 2014
+        with Computer Science as my stream.
+    </p>
+
+    <h3>College / University</h3>
+
+    <p>
+        After completing my school education, I joined
+        Sethu Institute of Technology for my higher education.
+    </p>
+
+    <h3>Degree Details</h3>
+
+    <p>
+        I completed my Bachelor of Engineering degree
+        with a specialization in Civil Engineering.
+    </p>
+
+    <!-- Education SVG -->
+    <h3>Education</h3>
+
+    <svg width="200" height="150">
+
+        <!-- Book -->
+        <rect x="40" y="40"
+              width="120"
+              height="80"
+              fill="lightblue"
+              stroke="black"
+              stroke-width="3"/>
+
+        <line x1="100" y1="40"
+              x2="100" y2="120"
+              stroke="black"
+              stroke-width="3"/>
+
+        <line x1="55" y1="60"
+              x2="85" y2="60"
+              stroke="black"
+              stroke-width="2"/>
+
+        <line x1="115" y1="60"
+              x2="145" y2="60"
+              stroke="black"
+              stroke-width="2"/>
+
+    </svg>
+
+
+    <hr>
+
+
+    <!-- Achievements -->
+    <h2>3. Achievements</h2>
+
+    <h3>Academic Achievements</h3>
+
+    <p>
+        Completing my Bachelor of Engineering in Civil Engineering
+        was one of the important milestones in my academic journey.
+    </p>
+
+    <h3>Sports Achievements</h3>
+
+    <p>
+        Sports have been an important part of my personal development.
+        They have taught me discipline, consistency, teamwork,
+        and determination.
+    </p>
+
+    <h3>Awards</h3>
+
+    <p>
+        I have participated in various activities and experiences
+        that helped me develop confidence and improve my abilities.
+    </p>
+
+    <h3>Certifications</h3>
+
+    <p>
+        I continue to learn new skills and improve my professional
+        knowledge through courses, training, and certifications.
+    </p>
+
+    <h3>Other Accomplishments</h3>
+
+    <p>
+        My professional and personal experiences have helped me
+        become more confident, responsible, and adaptable.
+    </p>
+
+    <!-- Achievement SVG -->
+    <h3>Achievement</h3>
+
+    <svg width="200" height="150">
+
+        <!-- Trophy -->
+        <rect x="75" y="45"
+              width="50"
+              height="60"
+              fill="gold"
+              stroke="black"
+              stroke-width="3"/>
+
+        <rect x="90" y="105"
+              width="20"
+              height="20"
+              fill="black"/>
+
+        <rect x="70" y="125"
+              width="60"
+              height="10"
+              fill="black"/>
+
+        <circle cx="75" cy="65"
+                r="20"
+                fill="none"
+                stroke="black"
+                stroke-width="4"/>
+
+        <circle cx="125" cy="65"
+                r="20"
+                fill="none"
+                stroke="black"
+                stroke-width="4"/>
+
+    </svg>
+
+
+    <hr>
+
+
+    <!-- Special Skills -->
+    <h2>4. Special Skills</h2>
+
+    <h3>Technical Skills</h3>
+
+    <p>
+        I have developed technical and professional skills
+        through education, work experience, and continuous learning.
+    </p>
+
+    <h3>Communication Skills</h3>
+
+    <p>
+        I believe effective communication is important for
+        understanding people, sharing ideas, and working as a team.
+    </p>
+
+    <h3>Leadership</h3>
+
+    <p>
+        I have developed leadership qualities by taking responsibility,
+        working with others, and contributing towards common goals.
+    </p>
+
+    <h3>Problem-Solving</h3>
+
+    <p>
+        I enjoy understanding problems, analysing different possibilities,
+        and finding practical and effective solutions.
+    </p>
+
+    <h3>Other Talents</h3>
+
+    <p>
+        I am interested in creativity, design, sports, learning new
+        technologies, and exploring new ideas.
+    </p>
+
+    <!-- Skills SVG -->
+    <h3>My Skills</h3>
+
+    <svg width="200" height="150">
+
+        <!-- Gear -->
+        <circle cx="100" cy="75"
+                r="40"
+                fill="lightgray"
+                stroke="black"
+                stroke-width="4"/>
+
+        <circle cx="100" cy="75"
+                r="15"
+                fill="white"
+                stroke="black"
+                stroke-width="3"/>
+
+        <rect x="90" y="20"
+              width="20"
+              height="25"
+              fill="black"/>
+
+        <rect x="90" y="105"
+              width="20"
+              height="25"
+              fill="black"/>
+
+        <rect x="45" y="65"
+              width="25"
+              height="20"
+              fill="black"/>
+
+        <rect x="130" y="65"
+              width="25"
+              height="20"
+              fill="black"/>
+
+    </svg>
+
+
+    <hr>
+
+
+    <!-- Conclusion -->
+    <h2>5. Conclusion</h2>
+
+    <p>
+        My personal journey has been a combination of education,
+        experiences, challenges, achievements, and continuous learning.
+    </p>
+
+    <p>
+        From my early education at Tagore Vidyalayam Matriculation
+        Higher Secondary School to completing my Bachelor of Engineering
+        in Civil Engineering at Sethu Institute of Technology,
+        every stage has contributed to my personal growth.
+    </p>
+
+    <p>
+        My future goal is to continue learning new skills,
+        take on new challenges, grow professionally, and make
+        a meaningful contribution through my work.
+    </p>
+
+    <p>
+        I believe that every challenge is an opportunity to learn,
+        and every step forward brings us closer to our goals.
+    </p>
+
+    <h3>My Inspiring Statement</h3>
+
+    <blockquote>
+        "Success is not a destination; it is a journey of
+        continuous learning, growth, and perseverance."
+    </blockquote>
+
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            <strong>My Personal Journey</strong>
+        </p>
+
+        <p>
+            Born in Madurai | 11/11/1996
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
