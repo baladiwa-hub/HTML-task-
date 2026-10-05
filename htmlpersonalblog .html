@@ -1,0 +1,941 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Journey</title>
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: #111;
+            color: white;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #111111,
+                #333333
+            );
+
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 80px);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ddd;
+            margin-bottom: 30px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 13px 28px;
+            background: #ffcc00;
+            color: #111;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            transform: translateY(-3px);
+            background: #fff;
+        }
+
+        /* =========================
+           MAIN CONTAINER
+        ========================== */
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            color: #888;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin-top: 5px;
+        }
+
+        .section-header p {
+            color: #666;
+            max-width: 700px;
+            margin-top: 10px;
+        }
+
+        /* =========================
+           CONTENT GRID
+        ========================== */
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .content {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .content h3 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .content p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .content ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        /* =========================
+           SVG ILLUSTRATION
+        ========================== */
+
+        .illustration {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .illustration svg {
+            width: 280px;
+            height: 280px;
+        }
+
+        /* =========================
+           CARDS
+        ========================== */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+        /* =========================
+           CONCLUSION
+        ========================== */
+
+        .conclusion {
+            background: #111;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            margin: 50px 8%;
+            padding: 80px 10%;
+        }
+
+        .conclusion h2 {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .conclusion p {
+            color: #ccc;
+            max-width: 750px;
+            margin: 0 auto 20px;
+        }
+
+        .quote {
+            font-size: 24px;
+            font-style: italic;
+            color: #ffcc00;
+            margin-top: 30px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .section-header h2 {
+                font-size: 34px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .conclusion {
+                margin: 30px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            My Journey
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p>MY STORY • MY GROWTH • MY FUTURE</p>
+
+        <h1>My Personal Journey</h1>
+
+        <p>
+            Every journey begins with a single step.
+            This is the story of my experiences, education,
+            achievements, skills, and dreams.
+        </p>
+
+        <a href="#introduction" class="hero-button">
+            Explore My Journey ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<main>
+
+<!-- =========================
+     INTRODUCTION
+========================== -->
+
+<section id="introduction">
+
+    <div class="section-header">
+
+        <span class="section-number">01 — Introduction</span>
+
+        <h2>Where My Story Began</h2>
+
+        <p>
+            Every person has a unique story shaped by their
+            childhood, education, experiences, and ambitions.
+        </p>
+
+    </div>
+
+
+    <div class="content-grid">
+
+        <div class="content">
+
+            <h3>My Beginning</h3>
+
+            <p>
+                I was born in <strong>[Your Birthplace]</strong>
+                on <strong>[Your Date of Birth]</strong>.
+                My early years were filled with curiosity,
+                learning, and memorable experiences.
+            </p>
+
+            <p>
+                I completed my elementary education at
+                <strong>[Primary School Name]</strong>.
+                During these years, I developed an interest
+                in learning new things and exploring the world
+                around me.
+            </p>
+
+            <p>
+                My childhood experiences played an important
+                role in shaping my personality and helped me
+                develop the confidence to pursue my dreams.
+            </p>
+
+        </div>
+
+
+        <!-- SVG -->
+
+        <div class="illustration">
+
+            <svg viewBox="0 0 300 300"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                <circle cx="150" cy="150"
+                        r="120"
+                        fill="#eeeeee"/>
+
+                <!-- Person -->
+
+                <circle cx="150"
+                        cy="100"
+                        r="35"
+                        fill="#111"/>
+
+                <path d="M90 210
+                         C90 165 115 140 150 140
+                         C185 140 210 165 210 210"
+                      fill="#111"/>
+
+                <!-- Decorative circles -->
+
+                <circle cx="70" cy="80"
+                        r="10"
+                        fill="#ffcc00"/>
+
+                <circle cx="230" cy="190"
+                        r="12"
+                        fill="#ffcc00"/>
+
+            </svg>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================== -->
+
+<section id="education">
+
+    <div class="section-header">
+
+        <span class="section-number">02 — Education</span>
+
+        <h2>The Foundation of My Knowledge</h2>
+
+        <p>
+            Education has played an important role in
+            developing my knowledge, discipline, and perspective.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>School Education</h3>
+
+            <p>
+                I completed my school education at
+                <strong>[School Name]</strong>.
+                These years gave me a strong foundation
+                in academics and personal development.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Higher Secondary</h3>
+
+            <p>
+                I completed my higher secondary education
+                in <strong>[Year]</strong>, specializing in
+                <strong>[Stream / Subject]</strong>.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>College / University</h3>
+
+            <p>
+                I pursued higher education at
+                <strong>[College / University Name]</strong>,
+                where I developed deeper knowledge and
+                practical skills.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Degree</h3>
+
+            <p>
+                I completed my
+                <strong>[Degree Name]</strong>
+                in <strong>[Specialization]</strong>.
+                My college experience helped prepare me
+                for my professional career.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Education SVG -->
+
+    <div class="illustration">
+
+        <svg viewBox="0 0 300 300"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <rect x="50"
+                  y="80"
+                  width="200"
+                  height="130"
+                  rx="10"
+                  fill="#111"/>
+
+            <rect x="75"
+                  y="105"
+                  width="150"
+                  height="15"
+                  fill="#ffcc00"/>
+
+            <rect x="75"
+                  y="135"
+                  width="120"
+                  height="12"
+                  fill="white"/>
+
+            <rect x="75"
+                  y="160"
+                  width="140"
+                  height="12"
+                  fill="white"/>
+
+            <path d="M100 210 L150 250 L200 210"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="12"/>
+
+        </svg>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACHIEVEMENTS
+========================== -->
+
+<section id="achievements">
+
+    <div class="section-header">
+
+        <span class="section-number">03 — Achievements</span>
+
+        <h2>Milestones Along the Way</h2>
+
+        <p>
+            Every achievement represents dedication,
+            persistence, and the willingness to keep learning.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Academic Achievements</h3>
+
+            <p>
+                Mention academic awards, high grades,
+                scholarships, competitions, or important
+                academic milestones.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Sports Achievements</h3>
+
+            <p>
+                Mention sports competitions, medals,
+                championships, team participation,
+                or other sporting accomplishments.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Awards</h3>
+
+            <p>
+                Mention awards and recognitions received
+                throughout your academic or professional journey.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Certifications</h3>
+
+            <p>
+                Mention professional certifications,
+                courses, workshops, and specialized training.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Other Accomplishments</h3>
+
+            <p>
+                Include volunteering, projects,
+                competitions, creative work, leadership roles,
+                or other memorable accomplishments.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Achievement SVG -->
+
+    <div class="illustration">
+
+        <svg viewBox="0 0 300 300"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Trophy -->
+
+            <path d="M100 70
+                     H200
+                     V120
+                     C200 160 180 180 150 180
+                     C120 180 100 160 100 120 Z"
+                  fill="#ffcc00"/>
+
+            <rect x="135"
+                  y="180"
+                  width="30"
+                  height="50"
+                  fill="#111"/>
+
+            <rect x="105"
+                  y="230"
+                  width="90"
+                  height="15"
+                  rx="5"
+                  fill="#111"/>
+
+            <!-- Handles -->
+
+            <path d="M100 90
+                     C60 80 60 140 105 135"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="12"/>
+
+            <path d="M200 90
+                     C240 80 240 140 195 135"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="12"/>
+
+        </svg>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SPECIAL SKILLS
+========================== -->
+
+<section id="skills">
+
+    <div class="section-header">
+
+        <span class="section-number">04 — Special Skills</span>
+
+        <h2>What I Bring to the Table</h2>
+
+        <p>
+            Skills are developed through continuous practice,
+            experience, and a willingness to improve.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Technical Skills</h3>
+
+            <p>
+                List your technical skills, software knowledge,
+                programming abilities, design tools, or
+                professional expertise.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Communication</h3>
+
+            <p>
+                I believe effective communication is essential
+                for building relationships and working
+                successfully with others.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Leadership</h3>
+
+            <p>
+                Leadership has taught me how to take
+                responsibility, support others, and work
+                toward common goals.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Problem-Solving</h3>
+
+            <p>
+                I enjoy understanding problems,
+                exploring different possibilities, and
+                finding practical solutions.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Other Talents</h3>
+
+            <p>
+                Mention creative abilities, hobbies,
+                artistic skills, sports abilities, or
+                other talents that make you unique.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Skills SVG -->
+
+    <div class="illustration">
+
+        <svg viewBox="0 0 300 300"
+             xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Gear -->
+
+            <circle cx="150"
+                    cy="150"
+                    r="65"
+                    fill="#111"/>
+
+            <circle cx="150"
+                    cy="150"
+                    r="25"
+                    fill="#ffcc00"/>
+
+            <!-- Gear teeth -->
+
+            <rect x="140"
+                  y="55"
+                  width="20"
+                  height="35"
+                  fill="#111"/>
+
+            <rect x="140"
+                  y="210"
+                  width="20"
+                  height="35"
+                  fill="#111"/>
+
+            <rect x="55"
+                  y="140"
+                  width="35"
+                  height="20"
+                  fill="#111"/>
+
+            <rect x="210"
+                  y="140"
+                  width="35"
+                  height="20"
+                  fill="#111"/>
+
+        </svg>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONCLUSION
+========================== -->
+
+<section id="conclusion" class="conclusion">
+
+    <h2>The Journey Continues</h2>
+
+    <p>
+        Looking back, my journey has been shaped by
+        education, challenges, achievements, relationships,
+        and countless learning experiences.
+    </p>
+
+    <p>
+        Every stage has taught me something valuable.
+        The challenges helped me become stronger,
+        while my achievements gave me the confidence
+        to aim higher.
+    </p>
+
+    <p>
+        My future goal is to continue learning,
+        develop new skills, take on meaningful challenges,
+        and make a positive impact through my work.
+    </p>
+
+    <p>
+        I believe that success is not simply about
+        reaching a destination. It is about continuously
+        growing and becoming a better version of yourself.
+    </p>
+
+    <div class="quote">
+        “The journey of a thousand miles begins with a single step.”
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+    <p>
+        © 2026 My Personal Journey
+    </p>
+
+    <p>
+        Designed & Created by Me
+    </p>
+
+</footer>
+
+</body>
+</html>
+```
